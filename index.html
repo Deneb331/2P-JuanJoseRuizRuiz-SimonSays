@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>2P Simon Says</title>
 </head>
 <body>
-    
+    <section id="hero">
+        <div>
+            <h1 id="hero-title">Simon <img src="assets/images/SimonIcon256.png" alt="Simon game icon"></h1>
+        </div>
+    </section>
+    <section id="controls">
+        <button class="btn" id="start-button">Start!</button>
+    </section>
+    <section id="game">
+        <button data-type="control-green" class="btn btn--green"></button>
+        <button data-type="control-red" class="btn btn--red"></button>
+        <button data-type="control-yellow" class="btn btn--yellow"></button>
+        <button data-type="control-blue" class="btn btn--blue"></button>
+    </section>
+    <section id="score-area">
+        <p class="scores">Correct Answers <span id="correct">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+    </section>
+    <footer>
+        <p id="sign-text">Portfolio website by Juan Jose Ruiz Ruiz</p>
+    </footer>
 
     
     <script src="assets/js/script.js"></script>
