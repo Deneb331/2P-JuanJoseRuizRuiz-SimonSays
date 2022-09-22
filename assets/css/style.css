@@ -37,13 +37,17 @@ body {
     font-weight: bold;
     background-color: transparent;
 
-    border: 3px solid;
-    border-radius: 7%;
+    border: 0px solid;
     
     margin: 25px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#start-button:hover {
+    border: 3px solid;
+    border-radius: 7%;
 }
 
 /* Game controls */
@@ -61,25 +65,25 @@ body {
     margin: 25px;
 }
 
-.btn--green {
+#btn--green {
     background: url('../images/Green.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: right;
 }
-.btn--blue {
+#btn--blue {
     background: url('../images/Blue.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: left;
 }
-.btn--red {
+#btn--red {
     background: url('../images/Red.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: left;
 }
-.btn--yellow {
+#btn--yellow {
     background: url('../images/Yellow.png');
     background-size: 200px;
     background-repeat: no-repeat;
