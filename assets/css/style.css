@@ -71,11 +71,19 @@ body {
     background-repeat: no-repeat;
     background-position: right;
 }
+
+.green-active {
+    background-image: url('../images/GreenSelected.png') !important;
+}
+
 #btn--blue {
     background: url('../images/Blue.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: left;
+}
+.blue-active {
+    background-image: url('../images/BlueSelected.png') !important;
 }
 #btn--red {
     background: url('../images/Red.png');
@@ -83,11 +91,17 @@ body {
     background-repeat: no-repeat;
     background-position: left;
 }
+.red-active {
+    background-image: url('../images/RedSelected.png') !important;
+}
 #btn--yellow {
     background: url('../images/Yellow.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: right;
+}
+.yellow-active {
+    background-image: url('../images/YellowSelected.png') !important;
 }
 
 /* Score */
@@ -132,6 +146,7 @@ body {
     background-color: transparent;
     border: solid 1px white;
     border-radius: 2px;
+    padding: 2px 5px;
 }
 
 #submit-button {
