@@ -83,7 +83,7 @@ function startGame(colorLimit){
         gameStarted = true;
     }, intervalTime * colorNum + 600);
 
-    document.getElementById("gameover-message").value = "";
+    document.getElementById("gameover-message").innerHTML = "";
 }
 
 /**
@@ -131,14 +131,14 @@ function checkPlayerList() {
     if(playerList.length === gameList.length){
         const equal = (playerList, gameList) => JSON.stringify(playerList) === JSON.stringify(gameList);
         if(equal(playerList, gameList)){
-            document.getElementById("gameover-message").value = "Good job!";
+            document.getElementById("gameover-message").innerHTML = "Good job!";
             document.getElementById("gameover-message").style.color = "#0BAA13";
             playerList = [];
             gameList = [];
             incrementScore();
             gameStarted = false;
         } else {
-            document.getElementById("gameover-message").value = "Wrong sequence, try again!";
+            document.getElementById("gameover-message").innerHTML = "Wrong sequence, try again!";
             document.getElementById("gameover-message").style.color = "#FB241D";
             playerList = [];
             gameList = [];
@@ -180,7 +180,7 @@ function sendScore() {
 
         //Can use send instead of sendForm because the submit button is there only for checking if the required fields are filled
         emailjs.send("service_20gl1ow","template_m97fktr", params).then(function (res) {
-            document.getElementById("gameover-message").innerHTML = "Score sended succesfully, check your email!";
+            document.getElementById("gameover-message").innerHTML = "Score sent succesfully, check your email!";
             document.getElementById("gameover-message").style.color = "#FFFFFF";
         });
 

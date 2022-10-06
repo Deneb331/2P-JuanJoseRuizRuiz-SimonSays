@@ -6,7 +6,7 @@ This site is a recreation of the classic game Simon, in which the user has to re
 
 <h2 align="center"><img src="assets/images/SimonSaysReadmeLogo.png"></h2>
 
-<h2 align="center"><img src="assets/images/ReadmeHeader.PNG"></h2>
+<h2 align="center"><img src="assets/images/SimonHeader.png"></h2>
 
 ## User Experience (UX)
 
@@ -24,7 +24,7 @@ This site is a recreation of the classic game Simon, in which the user has to re
 -   ### Design
     -   #### Colour Scheme
         -   The main colours used in this website are the ones used in the original Simon Game.
-        <h2 align="center"><img src="assets/images/ColorPallette.PNG"></h2>
+        <h2 align="center"><img src="assets/images/ColorPallette.png"></h2>
 
     -   #### Typography
         -   The Kanit font is the only one used in this project, as it gives a similar feeling as the original Simon game font, but feels more modern and fresh.
@@ -74,11 +74,11 @@ This site is a recreation of the classic game Simon, in which the user has to re
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-        <h2 align="center"><img src="assets/images/TestHTML.PNG"></h2>
+        <h2 align="center"><img src="assets/images/HTMLValidation.png"></h2>
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-        <h2 align="center"><img src="assets/images/TestCSS.PNG"></h2>
+        <h2 align="center"><img src="assets/images/CSSValidation.png"></h2>
 -   [JSHint](https://jshint.com/)
-        <h2 align="center"><img src="assets/images/TestJS.PNG"></h2>
+        <h2 align="center"><img src="assets/images/JSHint.png"></h2>
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -115,6 +115,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - Game buttons don't change image correctly - fixed making the button change their images adding and removing a temporal class.
 - Email button seems to not be working correctly - fixed after changing some errors in emailjs.send function and the params dictionary.
 - The functions executed with setTimeout() don't take the time expected to execute - The syntax of the setTimeout tool was wrong.
+- The message below the game don't show up correctly - fixed after noticing that it was needed to give the value to the p element with innerHTML instead of value.
 
 ## Deployment
 
