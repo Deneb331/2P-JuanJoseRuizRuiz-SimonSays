@@ -140,7 +140,9 @@ The project was deployed to GitHub Pages using the following steps...
 
 -   [MDNWebDocs](https://developer.mozilla.org/en-US/docs/Web) : For research about JS features.
 
--   [30SecondsOfCode](https://www.30secondsofcode.org/) : For research about array comparison
+-   [30SecondsOfCode](https://www.30secondsofcode.org/) : For research about array comparison.
+
+-   [EmailJS](https://www.emailjs.com/docs/) : For EmailJS implementation.
 
 ### Content
 
