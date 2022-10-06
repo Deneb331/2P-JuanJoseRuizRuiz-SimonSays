@@ -106,6 +106,13 @@ body {
 
 /* Score */
 
+#state-message{
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
 #score-area {
     width: 100%;
     height: auto;
@@ -119,6 +126,7 @@ body {
     color: #0BAA13;
     border: 2px solid;
     padding: 10px;
+    text-align: center;
 }
 
 #score--incorrect {
@@ -126,6 +134,7 @@ body {
     color: #FB241D;
     border: 2px solid;
     padding: 10px;
+    text-align: center;
 }
 
 /* Send score form */
@@ -139,7 +148,7 @@ body {
 }
 
 .text-input {
-    width: 40%;
+    width: 100%;
     height: 25px;
     color: white;
     margin: 5px auto;
@@ -185,4 +194,55 @@ footer{
     position: relative;
     bottom: -15px;
     margin-right: 10px;
+}
+
+/* Media queries */
+@media screen and (max-width: 640px) {
+    /* Logo */    
+    #hero-title {
+        font-size: 56px;
+    }
+    
+    #hero-image{
+        width: 100px;
+        height: 100px;
+        top: 80px;
+        margin-bottom: 50px;
+    }
+
+    /* Game controls */
+
+    #game{
+        grid-template-columns: 100px 100px;
+        grid-auto-rows: 100px;
+    }
+
+    .btn {
+        margin: 10px;
+    }
+
+    #btn--green {
+        background-size: 80px;
+    }
+
+    #btn--blue {
+        background-size: 80px;
+    }
+    #btn--red {
+        background-size: 80px;
+    }
+    #btn--yellow {
+        background-size: 80px;
+    }
+
+    /* Score */
+    #score--correct {
+        margin: 15px;
+        padding: 5px;
+    }
+    
+    #score--incorrect {
+        margin: 15px;
+        padding: 5px;
+    }
 }

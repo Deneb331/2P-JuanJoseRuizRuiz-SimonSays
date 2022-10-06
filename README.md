@@ -40,6 +40,8 @@ This site is a recreation of the classic game Simon, in which the user has to re
 
 -   Email the score to the user
 
+-   Input validation (blank fields only)
+
 ## Technologies Used
 
 ### Languages Used
@@ -109,10 +111,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Bug Log
 
-- Game buttons didn't align correctly - fixed using grid display instead of flex display.
-- Game buttons don't change image correctly - 
-- Email button seems to not be working correctly - 
-- The functions executed with setTimeout() don't take the time expected to execute  - 
+- Game buttons don't align correctly - fixed using grid display instead of flex display.
+- Game buttons don't change image correctly - fixed making the button change their images adding and removing a temporal class.
+- Email button seems to not be working correctly - fixed after changing some errors in emailjs.send function and the params dictionary.
+- The functions executed with setTimeout() don't take the time expected to execute - The syntax of the setTimeout tool was wrong.
 
 ## Deployment
 

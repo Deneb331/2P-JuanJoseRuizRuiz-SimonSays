@@ -43,7 +43,7 @@ function playColor(index) {
         iluminateColor('green', false);
     }
     if(index == 1){
-       iluminateColor('red', false)
+       iluminateColor('red', false);
     }
     
     if(index == 2){
@@ -82,6 +82,8 @@ function startGame(colorLimit){
     setTimeout(function() {
         gameStarted = true;
     }, intervalTime * colorNum + 600);
+
+    document.getElementById("gameover-message").value = "";
 }
 
 /**
@@ -93,7 +95,7 @@ function iluminateColor(color, playerPressed){
     document.getElementById(colorId).classList.add(colorClass);
     
     setTimeout(function(){
-        switchOffColor(color)
+        switchOffColor(color);
     }, 500);
     
     if(playerPressed) {
@@ -129,13 +131,15 @@ function checkPlayerList() {
     if(playerList.length === gameList.length){
         const equal = (playerList, gameList) => JSON.stringify(playerList) === JSON.stringify(gameList);
         if(equal(playerList, gameList)){
-            alert("Good job");
+            document.getElementById("gameover-message").value = "Good job!";
+            document.getElementById("gameover-message").style.color = "#0BAA13";
             playerList = [];
             gameList = [];
             incrementScore();
             gameStarted = false;
         } else {
-            alert(playerList + gameList + "Try again");
+            document.getElementById("gameover-message").value = "Wrong sequence, try again!";
+            document.getElementById("gameover-message").style.color = "#FB241D";
             playerList = [];
             gameList = [];
             incrementWrongScore();
@@ -166,16 +170,24 @@ function incrementWrongScore() {
  * Sends the score to the player's email specified in the form.
  */
 function sendScore() {
-    let params = {
-        "to_name" : document.getElementById("full-name").innerHTML,
-        "email" : document.getElementById("player-email").innerHTML,
-        "message" : "You had " + document.getElementById("correct").innerHTML + "correct answers and " + document.getElementById("incorrect").innerHTML + "wrong answers."
-    };
+    if(document.getElementById("full-name").value !== "" && document.getElementById("player-email").value !== "") {
+        console.log("All good");
+        let params = {
+            "to_name" : document.getElementById("full-name").value,
+            "email" : document.getElementById("player-email").value,
+            "message" : "You had " + document.getElementById("correct").innerHTML + " correct answers and " + document.getElementById("incorrect").innerHTML + " wrong answers."
+        };
 
-    emailjs.send("service_20gl1ow","template_m97fktr", params).then(function(res){
-        alert("Your score has been sended.");
-    });
+        //Can use send instead of sendForm because the submit button is there only for checking if the required fields are filled
+        emailjs.send("service_20gl1ow","template_m97fktr", params).then(function (res) {
+            document.getElementById("gameover-message").innerHTML = "Score sended succesfully, check your email!";
+            document.getElementById("gameover-message").style.color = "#FFFFFF";
+        });
 
-    document.getElementById("full-name").innerHTML = "";
-    document.getElementById("player-email").innerHTML = "";
+        document.getElementById("full-name").value = "";
+        document.getElementById("player-email").value = "";
+    } else {
+        document.getElementById("gameover-message").innerHTML = "You need to fill both fields to send your score.";
+        document.getElementById("gameover-message").style.color = "#FFFFFF";
+    }
 }
